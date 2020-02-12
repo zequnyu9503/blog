@@ -1,5 +1,6 @@
 {
 	"id":"0a02ca05-fb06-40ad-afd4-5cc84aaba729",
+	"tag":"web",
 	"title": "有趣的404页面",
 	"author": "yzq",
 	"time": "2018-1-26 18:30",
@@ -31,7 +32,7 @@
 		}, {
 			"tag": "a",
 			"class": "type-a-a",
-			"href": "https://qyzq.github.io/blog/404.html",
+			"href": "https://www.qyzq.github.io/blog/404.html",
 			"text": "在线查看 【好玩的404页面】"
 		}, {
 			"tag": "p",

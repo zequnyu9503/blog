@@ -8,6 +8,7 @@
     margin-block-start: 1em;
     margin-block-end: 1em;
     text-indent: 36px;
+    user-select: text;
 }
 
 .type-p-b {
@@ -20,6 +21,7 @@
     margin-block-start: 1em;
     margin-block-end: 1em;
     text-indent: 36px;
+    user-select: text;
 }
 
 .type-a-a {
@@ -29,6 +31,7 @@
     text-indent: 36px;
     font-size: 18px;
     letter-spacing: 1px;
+    user-select: none;
 }
 
 .img-wrapper {

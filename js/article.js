@@ -4,6 +4,7 @@ $(function() {
 	var paragraphs = $('.essay .paragraphs')
 	var page = defaultUrlParse('page');
 	var URL = articlesDir + page + '/';
+	var maxRecommend = 5;
 
     $.ajax({
 		type: 'get',
@@ -11,11 +12,12 @@ $(function() {
 		url: URL +  'content.json',
 		datatype: 'json',
 		dataFilter: function(data, type) {
-			return data;
+			let datum = JSON.parse(data)
+			loadWebFrame(datum);
+			return JSON.stringify(datum['content']);
 		},
 		success:function(data){
-			loadWebFrame(data);
-            for(let paragraph in data['content']){
+            for(let paragraph in data){
                 loadArticleByLine(data[paragraph]);
             }
 		},
@@ -26,10 +28,43 @@ $(function() {
 	
 	function loadWebFrame(frame) {
 		$('.essay .title h1').text(frame['title']);
+		$('.essay .bar span[name=time]').text(frame['time']);
+		$('.essay .bar span[name=author]').text(frame['author']);
+		let tag = frame['tag'];
+		console.log(tag)
+
+		$.ajax({
+			type: 'get',
+			async: true,
+			url: articlesDir +  'catalog.json',
+			datatype: 'json',
+			success:function(data){
+				let catalogs = data['catalog'];
+				let titles = Array();
+				for (let index in catalogs) {
+					if (catalogs[index]['tag'] === tag.toString()) {
+						titles.push(catalogs[index]);
+					}
+				}
+				if (titles.length == 0) {
+
+				} else {
+					for (let index in titles) {
+						let paragraph = titles[index];
+						let a = document.createElement('a');
+						a.target = "_blank";
+						a.href = articlesDir + "article.html?page=" + paragraph.id;
+						$('.recommend .paragraphs').append(a);
+					}
+				}
+			},
+			error: function(xhr, status, error) {
+				
+			}
+		});
 	}
 	
     function loadArticleByLine(paragraph) {
-		console.log(paragraph);
         switch (paragraph.tag) {
 			case 'p': add_p(paragraph); break;
 			case 'a': add_a(paragraph); break;
