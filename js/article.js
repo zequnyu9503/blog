@@ -88,8 +88,8 @@ $(function() {
 		a.innerHTML = paragraph.text;
 		if (!$.isEmptyObject(paragraph.download)) {
 			a.download = paragraph.download;
-			a.target = "_blank";
 		}
+		a.target = "_blank";
 		paragraphs.append(a);
 	}
 
