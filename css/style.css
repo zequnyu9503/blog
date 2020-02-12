@@ -37,16 +37,12 @@
 .img-wrapper {
     display: block;
     text-align: center;
-    margin: 25px 0px;
-
+    margin: 25px auto;
     max-width: 600px;
 }
 
 .type-img-a {
-    display: block;
     max-width: 100%;
     max-height: 100%;
-    background-attachment: fixed;
-    background-size:100% 100%;
 }
 
