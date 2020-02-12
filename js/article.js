@@ -86,8 +86,9 @@ $(function() {
 		a.className = paragraph.class;
 		a.href = paragraph.href;
 		a.innerHTML = paragraph.text;
-		if (!paragraph.download) {
+		if (!$.isEmptyObject(paragraph.download)) {
 			a.download = paragraph.download;
+			a.target = "_blank";
 		}
 		paragraphs.append(a);
 	}
