@@ -7,11 +7,11 @@
 		"text": ""
 	}, {
 		"tag": "p",
-		"class": "style-p-a",
+		"class": "type-p-a",
 		"text": "404页面设计灵感源于FreePik网站图片（上图所示）,文件由三部分组成：ERROR 404、警示图案和PAGE NOT FOUND。其中主体部分为警示图案，由警示标志（橙白相间）和人脸（仅显示眼睛）构成。人脸由两个又大又亮的眼睛组成，给人一种警示、提示、甚至有点震惊的感觉，小眼球更是带有某种搞笑的喜感。素材设计非常新颖大胆，有必要将其具体实现。"
 	}, {
 		"tag": "p",
-		"class": "style-p-a",
+		"class": "type-p-a",
 		"text": "由于原素材是一张设计图片，由HTML实现时有必要添加一些简单的动画，比如警示标志被小人顶起，小人眨眼睛的动作，提示“返回主页”等动画...这些动画使得页面更有活力而不是一张静态图片。"
 	},{
 		"tag": "img",
@@ -21,16 +21,16 @@
 		"text": ""
 	}, {
 		"tag": "p",
-		"class": "style-p-a",
+		"class": "type-p-a",
 		"text": "上图是展示了具体的实现效果。动画是无限循环的，其中每一段动画效果都由定时器和相应处理函数控制。本项目采用了CSS+HTML+Jquery编程，思路和实现都很简单。"
 	}, {
 		"tag": "a",
-		"class": "style-a-a",
+		"class": "type-a-a",
 		"href": "https://qyzq.github.io/blog/404.html",
 		"text": "在线查看 【好玩的404页面】"
 	}, {
 		"tag": "p",
-		"class": "style-p-a",
+		"class": "type-p-a",
 		"text": "备注：本项目开源，FreePik网站提供免费下载渠道，如有侵权请联系(Email: greatyuzequn@outlook.com)，QYZQ将及时处理。"
 	}
 ]
