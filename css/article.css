@@ -72,7 +72,7 @@
 .titles .paragraphs {
     display: block;
     padding: 15px;
-    text-align: center;
+    text-align: left;
 }
 
 .recommend a {
@@ -89,6 +89,18 @@
 
 .recommend a:hover {
     color: #d33a2b;
+}
+
+.recommend p {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .container .foot {

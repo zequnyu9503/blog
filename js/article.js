@@ -30,8 +30,8 @@ $(function() {
 		$('.essay .title h1').text(frame['title']);
 		$('.essay .bar span[name=time]').text(frame['time']);
 		$('.essay .bar span[name=author]').text(frame['author']);
+		let id = frame['id'];
 		let tag = frame['tag'];
-		console.log(tag)
 
 		$.ajax({
 			type: 'get',
@@ -42,24 +42,26 @@ $(function() {
 				let catalogs = data['catalog'];
 				let titles = Array();
 				for (let index in catalogs) {
-					if (catalogs[index]['tag'] === tag.toString()) {
+					if (catalogs[index]['tag'] === tag.toString() &&
+					catalogs[index]['id'] != id) {
 						titles.push(catalogs[index]);
 					}
 				}
-				if (titles.length == 0) {
-
+				if (titles.length === 0) {
+					$('.recommend .titles .paragraphs').append("<p>暂无相关文章</p>");
 				} else {
 					for (let index in titles) {
 						let paragraph = titles[index];
 						let a = document.createElement('a');
 						a.target = "_blank";
+						a.innerHTML = paragraph.title;
 						a.href = articlesDir + "article.html?page=" + paragraph.id;
 						$('.recommend .paragraphs').append(a);
 					}
 				}
 			},
 			error: function(xhr, status, error) {
-				
+				$('.recommend .paragraphs').innerHTML = "<p>暂无相关文章</p>";
 			}
 		});
 	}

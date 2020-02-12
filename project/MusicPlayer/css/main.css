@@ -1,0 +1,246 @@
+@import url("iconfont.css");
+body, div, section, p, a{
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #E9E8EF;
+}
+
+.envelope {
+	display: block;
+	width: 580px;
+	height: 360px;
+	margin: 0px auto;
+	margin-top: 200px;
+	background-color: #F5F5F5;
+	border-radius: 50px 50px 50px 50px;
+	border: 0.75px solid rgba(160, 160, 160, .1);
+	box-shadow: -10px 19px 40px -8px #777e88, 0px -20px 22px -20px #777E88 inset;
+}
+
+.envelope .disk {
+	display: block;
+	position: relative;
+	width: 320px;
+	margin: auto;
+	height: 80px;
+}
+
+.envelope .disk .axis{
+	position: absolute;
+	width: 320px;
+	height: 320px;
+	position: absolute;
+	top: -60px;
+	left: 50%;
+	margin-left: -160px;
+	clip: rect(0px 320px 160px 0px);
+}
+
+.envelope .disk .axis .record{
+	width: 320px;
+	height: 320px;
+	position: absolute;
+	top: 0px;
+	background-image: url("../img/disk.png");
+	transform-origin: center;
+}
+
+.envelope .pocket {
+	display: block;
+	width: 570px;
+	height: 280px;
+	margin: 0px auto;
+	border-radius: 0px 0px 50px 50px;
+}
+
+.envelope .pocket .shadow {
+	width: 570px;
+	height: 20px;
+	background-image: radial-gradient(290px 10px at 285px 20px, rgba(9, 9, 9, 0.5), rgba(145, 141, 141, 0));
+}
+
+.envelope .pocket .panel {
+	display: block;
+	position: relative;
+	width: 570px;
+	height: 260px;
+}
+
+.envelope .pocket .panel .mainpanel {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	left: 0px;
+	top: 0px;
+	clip: rect(20px 570px 260px 0px);
+}
+
+.envelope .pocket .panel .mainpanel .progressbar {
+	display: block;
+	position: relative;
+	width: inherit;
+	height: inherit;
+}
+
+.envelope .pocket .panel .progressbar .excircle {
+	display: block;
+	position: absolute;
+	width: 460px;
+	height: 230px;
+	left: 50%;
+	margin-left: -230px;
+	border-radius: 0px 0px 460px 460px;
+	background-color: #374756;
+	box-shadow: 0px 3px 8px 0px #5a5858;
+}
+
+.envelope .pocket .panel .progressbar .pcircle {
+	display: block;
+	position: absolute;
+	width: 460px;
+	height: 230px;
+	left: 50%;
+	margin-left: -230px;
+	border-radius: 0px 0px 460px 460px;
+	background-color: #009EF9;
+	transform-origin: 50% 0;
+	transform: rotate(175deg);
+}
+
+.envelope .pocket .panel .progressbar .innercircle {
+	display: block;
+	position: absolute;
+	width: 430px;
+	height: 215px;
+	left: 50%;
+	margin-left: -215px;
+	border-radius: 0px 0px 430px 430px;
+	background-color: #F5F5F5;
+	box-shadow: 0px 3px 8px 0px #5a5858 inset;
+}
+
+.envelope .pocket .panel .control {
+	display: block;
+	position: absolute;
+	width: 320px;
+	height: 160px;
+	left: 50%;
+	top: 0px;
+	margin-left: -160px;
+	border-radius: 0px 0px 320px 320px;
+	box-shadow: 0px 1px 80px 1px #dde1e8, 0px 1px 80px 1px #dde1e8 inset;
+	overflow: hidden;
+	background-color: #F5F5F5;
+}
+
+.envelope .pocket .panel .control .name {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 280px;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.envelope .pocket .panel .control .name>p {
+	font-family: Noto Sans SC Regular Regular;
+	font-size: 0.75em;
+	font-weight: 500;
+	letter-spacing: 0.1px;
+}
+
+.envelope .pocket .panel .control .name #p1 {
+	color: #646d76;
+}
+
+.envelope .pocket .panel .control .name #p2 {
+	color: #CACBCF;
+}
+
+.envelope .pocket .panel .control .btn {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 200px;
+	margin: auto;
+}
+
+.envelope .pocket .panel .control .btn .back,
+.envelope .pocket .panel .control .btn .forward {
+	display: block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.envelope .pocket .panel .control .btn .back>i,
+.envelope .pocket .panel .control .btn .forward>i {
+	width: inherit;
+	text-align: center;
+	line-height: 35px;
+	color: #CED4E5;
+}
+
+.envelope .pocket .panel .control .btn .play {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	border: 1.15px solid #000;
+	background-color: #4a5168;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0px 2px 10px #6c6868;
+	cursor: pointer;
+}
+
+.envelope .pocket .panel .control .btn .play>i {
+	color: #F5F5F5;
+	text-shadow: 0px 0px 10px #000000;
+}
+
+.footer{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	left: 0px;
+	bottom: 0px;
+}
+
+.footer .copyright{
+	display: block;
+	height: inherit;
+	line-height: inherit;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.footer .copyright p{
+	color: #000;
+	font-family:Helvetica;
+	font-size: 0.9em;
+	font-weight: 400;
+}
+
+.footer .copyright p a{
+	color: #ca0c16;
+	font-family:Helvetica;
+	text-decoration: none;
+	transition: color 1.5s;
+}
+
+.footer .copyright p a:hover{
+	color: #FF8C00;
+}
+
+
+
