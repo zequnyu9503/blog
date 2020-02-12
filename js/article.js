@@ -86,6 +86,9 @@ $(function() {
 		a.className = paragraph.class;
 		a.href = paragraph.href;
 		a.innerHTML = paragraph.text;
+		if (!paragraph.download) {
+			a.download = paragraph.download;
+		}
 		paragraphs.append(a);
 	}
 
