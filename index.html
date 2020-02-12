@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YZQ.BLOG</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/resize.css">
+    <link rel="shortcut icon" href="images/fish.png" type="image/x-icon"/>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/template" id = "articleTemplate">
+        <div class="article" id="{@id@}">
+            <div class="a-body">
+                <div class="a-body-left">
+                    <div class="left-title">
+                        <a style="color: #444;" href="articles/article.html?page={@id@}" title="{@title@}">{@title@}</a>
+                    </div>
+                    <div class="left-brief">
+                        <a style="color: #888;" href="#">{@brief@}</a>
+                    </div>
+                </div>
+                <div class="a-body-right">
+                    {@img@}
+                </div>
+            </div>
+            <div class="a-footer">
+                <span>
+                    <a style="color: #444;" href="#"><i class="iconfont icon-author" title="{@author@}"></i></a>
+                </span>
+                <span>
+                    <a style="color: #444;" href="#"><i class="iconfont icon-clock" title="{@time@}"></i></a>
+                </span>
+                <span>
+                    <a style="color: #444;" href="#"><i class="iconfont icon-{@tag@}" title="{@tag@}"></i></a>
+                </span>
+            </div>
+        </div>
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="#">YZQ.BLOG</a>
+                </div>
+                <ul class="links">
+                    <li class="link">
+                        <a class="link-a" href="#">首</a>
+                        <a class="link-a" href="#">页</a>
+                    </li>
+                    <li class="link">
+                        <a class="link-a" href="#">计</a>
+                        <a class="link-a" href="#">算</a>
+                        <a class="link-a" href="#">机</a>
+                    </li>
+                    <li class="link">
+                        <a class="link-a" href="#">大</a>
+                        <a class="link-a" href="#">学</a>
+                    </li>
+                    <li class="link">
+                        <a class="link-a" href="#">故</a>
+                        <a class="link-a" href="#">事</a>
+                    </li>
+                    <li class="link">
+                        <a class="link-a" href="#">关</a>
+                        <a class="link-a" href="#">于</a>
+                    </li>
+                </ul>
+                <div class="sm">
+                    <div class="menu">
+                        <div class="menu-icon">
+                            <i class="iconfont icon-menu"></i>
+                        </div>
+                        <div class="flymenu-wrapper">
+                            <div class="flymenu-container">
+                                <section class="query">
+                                    <form id="sform" method="get" class="iconfont">
+                                        <input type="text" id="querier" name="querier" placeholder="Search" maxlength="10">
+                                    </form>
+                                </section>
+                                <ul class="linkings">
+                                    <li class="linking">
+                                        <a href="#">首页</a>
+                                    </li>
+                                    <li class="linking">
+                                        <a href="#">计算机</a>
+                                    </li>
+                                    <li class="linking">
+                                        <a href="#">大学</a>
+                                    </li>
+                                    <li class="linking">
+                                        <a href="#">故事</a>
+                                    </li>
+                                    <li class="linking">
+                                        <a href="#">关于</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mask"></div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="search-icon">
+                            <i class="iconfont icon-search"></i>
+                        </div>
+                        <form id="sform" method="get">
+                            <input type="text" id="searcher" name="searcher" placeholder="Search" maxlength="10">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="side">
+                <section class="intro-me">
+                    <a href="#">
+                        <svg class="old-fish" viewBox="0 0 1638 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6032" xmlns:xlink="http://www.w3.org/1999/xlink" width="51.1875" height="32"><defs><style type="text/css"></style></defs><path d="M1614.848 206.9504a38.912 38.912 0 0 0-41.984 8.3968L1331.2 409.3952C1282.7648 181.3504 1030.0416 25.1904 728.1664 3.1744 810.5984 154.624 857.6 327.7824 857.6 512s-47.0016 357.5808-129.4336 508.8256c301.7728-22.016 554.5984-178.176 603.0336-406.2208l241.5616 194.1504a39.2192 39.2192 0 0 0 42.0864 8.192 38.1952 38.1952 0 0 0 23.552-35.5328V242.5856a38.912 38.912 0 0 0-23.552-35.6352z" fill="#ebad2d" p-id="6033"></path><path d="M409.6 512m-102.4 0a102.4 102.4 0 1 0 204.8 0 102.4 102.4 0 1 0-204.8 0Z" fill="#ebad2d" p-id="6034"></path><path d="M636.416 0C282.5216 11.776 0 236.2368 0 512s282.5216 500.224 636.416 512c91.0336-149.6064 144.384-324.4032 144.384-512s-53.3504-362.3936-144.384-512zM409.6 716.8a204.8 204.8 0 0 1 0-409.6 204.8 204.8 0 0 1 0 409.6z" fill="#ebad2d"></path></svg>
+                    </a>
+                    <a href="#"><p class="me">yuzequn</p></a>
+                </section>
+                <section class="intro-blog">
+                    <p class="intro-blog-title">我的博客</p>
+                    <p class="intro-blog-context"></p>
+                </section>
+            </div>
+            <div class="main">
+                <div class="articles" id="articles">
+                    <!--文章列表填充区-->
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <div class="assistance">
+            <div class="assistance-icon up" title="返回顶部">
+                <i class="iconfont icon-up"></i>
+            </div>
+            <div class="assistance-icon en" title="切换英文">
+                <i class="iconfont icon-en"></i>
+            </div>
+            <div class="assistance-icon appreciate" title="点赞">
+                <i class="iconfont icon-appreciate"></i>
+            </div>
+            <div class="assistance-icon settings" title="设置">
+                <i class="iconfont icon-settings"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/default.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

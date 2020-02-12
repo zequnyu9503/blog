@@ -1,0 +1,45 @@
+.type-p-a {
+    display: block;
+    color: #4d4f53;
+    font-family: Hiragino Sans GB,Microsoft;
+    font-size: 18px !important;
+    letter-spacing: 1px;
+    line-height: 32px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    text-indent: 36px;
+}
+
+.type-p-b {
+    display: block;
+    color: #404040;
+    font-family: Microsoft Yahei;
+    font-size: 18px !important;
+    letter-spacing: 1px;
+    line-height: 32px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    text-indent: 36px;
+}
+
+.type-a-a {
+    display: block;
+    color: #5e6faa;
+    line-height: 48px;
+    text-indent: 36px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.img-wrapper {
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.type-img-a {
+    display: block;
+    max-width: 640px;
+    max-height: 500px;
+}
+

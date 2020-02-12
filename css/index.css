@@ -1,0 +1,156 @@
+.container .side{
+	display: block;
+	align-items: center;
+	margin-top: 3.5em;
+	padding-top: 3em;
+}
+
+.side .intro-me{
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 30em;
+	margin: 2em auto;
+}
+
+.intro-me .old-fish{
+	display: block;
+	width: 5.5em;
+	height: 3.5em;
+}
+
+.intro-me .me{
+	display: block;
+	width: 5em;
+	height: 100%;
+	line-height: 100%;
+	text-align: center;
+	color: #454545;
+	font-size: 3.5em;
+	font-family: "Varela Round",sans-serif;
+	text-transform: uppercase;
+	overflow: hidden;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+.side .intro-blog{
+	display: block;
+	width: 30em;
+	margin: 2em auto;
+	color: #454545;
+}
+
+.intro-blog .intro-blog-title{
+	margin: 1em 0em;
+	text-align: left;
+	text-indent: 1.4em;
+	font-size: 1.25em;
+	font-weight: 500;
+	letter-spacing: 5px;
+	font-family: simhei,sans-serif;
+}
+
+.intro-blog .intro-blog-context{
+	margin: 1em 0em;
+	text-align: left;
+	text-indent: 2em;
+	font-size: 0.95em;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-family: simhei,sans-serif;
+}
+
+/*main*/
+
+.container .main{
+	display: block;
+	margin-top: 3.5em;
+	z-index: 100;
+}
+
+.main .articles{
+	display: block;
+	padding: 2em 4em 1em 2.5em;
+}
+
+.articles .article{
+	display: block;
+	width: 100%;
+	min-width: 600px;
+	background-color: #FFF;
+	border: 1px solid rgba(140,140,140,.3);
+	margin:2.5em 0em;
+}
+
+.article .a-body{	
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	min-height: 140px;
+}
+
+.a-body .a-body-left{
+	display: block;
+}
+
+.a-body-left .left-title{
+	display: block;
+}
+
+.a-body .a-body-left{
+	display: block;
+	word-break: break-all;
+	padding: 1.5em 0.1em 0.5em 1em;
+}
+
+.a-body-left .left-title{
+	display: block;
+	font-size: 22px;
+	color: #444;
+	text-align: left;
+	line-height: 1.3em;	
+	margin-bottom: 0.5em;
+}
+
+.a-body-left .left-brief{
+	display: block;
+	font-size: 16px;
+	text-align: left;
+	color: #888;
+	line-height: 1.2em;
+}
+
+.a-body .a-body-right{
+	display: block;
+	margin: 1.5em 0.5em 0em 0.5em;
+}
+
+.a-body-right img{
+	width: 180px;
+	height: 110px;
+}
+
+.article .a-footer{
+	display: block;
+	width: 100%;
+	padding-left: 1em;
+	padding-bottom: 1em;
+	font-size: 13px;
+	color: #888;
+}
+
+.a-footer span{
+	margin-right: 0.8em;
+	user-select: none;
+}
+
+.a-footer span i{
+	line-height: 1em;
+}
+
+
+
+
