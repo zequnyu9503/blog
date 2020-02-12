@@ -98,6 +98,7 @@ $(function() {
 		let img = document.createElement('img');
 		img.src = URL + paragraph.src;
 		img.alt = paragraph.alt;
+		img.className = paragraph.class;
 		img.title = paragraph.text;
 		div.appendChild(img);
 		paragraphs.append(div);

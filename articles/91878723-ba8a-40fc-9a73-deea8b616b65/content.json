@@ -101,7 +101,7 @@
             "text":"moneyconverter.js 点此下载"
         }, {
             "tag": "p",
-            "class": "boldWord",
+            "class": "type-p-b",
             "text": "备注：本项目开源"
         }
     ]            
