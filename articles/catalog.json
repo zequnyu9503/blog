@@ -5,7 +5,7 @@
 			"id":"0a02ca05-fb06-40ad-afd4-5cc84aaba729",
 			"tag":"web",
 			"title":"有趣的404页面",
-			"author":"yzq",
+			"author":"YZQ",
 			"img":"eed92cdf-22a6-450e-aaeb-74053fabc1cd.jpg",
 			"brief":"404页面设计灵感源于FreePik网站图片（上图所示）,文件由三部分组成：ERROR 404、警示图案和PAGE NOT FOUND...",
 			"time":"2018-1-26 18:30"
@@ -14,7 +14,7 @@
 			"id":"d043e7a3-feab-4d4d-a689-a25735d1cd70",
 			"tag":"web",
 			"title":"信封风格音乐播放器",
-			"author":"yzq",
+			"author":"YZQ",
 			"img":"",
 			"brief":"信封风格的H5音乐播放器，信封+唱片的UI设计，功能方面主要有上一首、下一首、播放、暂停、播放进度显示，无音量调节，播放进度不可控...",
 			"time":"2017-11-26 18:30"
@@ -23,7 +23,7 @@
 			"id":"91878723-ba8a-40fc-9a73-deea8b616b65",
 			"tag":"algorithm",
 			"title":"人民币大写转换数字金额",
-			"author":"yzq",
+			"author":"YZQ",
 			"img":"",
 			"brief":"Chinese-Money-Converter实现了将大写人民币金额转换为数字金额的功能，处理金额范围在0~1亿亿内，处理粒度最小为分，JavaScript语言实现...",
 			"time":"2017-11-26 18:30"
