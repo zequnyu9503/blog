@@ -4,12 +4,12 @@ var paragraphs = $('.essay .paragraphs')
 
 $(function() {
     
-    let URL = articlesDir + page + '/' + 'content.json';
+    let URL = articlesDir + page + '/';
 
     $.ajax({
 		type: 'get',
 		async: true,
-		url: URL,
+		url: URL +  'content.json',
 		datatype: 'json',
 		dataFilter: function(data, type) {
 			return data;
@@ -28,7 +28,8 @@ $(function() {
 		console.log(paragraph);
         switch (paragraph.tag) {
 			case 'p': add_p(paragraph); break;
-
+			case 'a': add_a(paragraph); break;
+			case 'img': add_img(paragraph); break;
 		}
 	}
 	
@@ -37,7 +38,25 @@ $(function() {
 		p.className = paragraph.class;
 		p.innerHTML = paragraph.text;
 		paragraphs.append(p);
-		console.log(paragraphs);
+	}
+
+	function add_a(paragraph) {
+		let a = document.createElement('a');
+		a.className = paragraph.class;
+		a.href = paragraph.href;
+		a.innerHTML = paragraph.text;
+		paragraphs.append(a);
+	}
+
+	function add_img(paragraph) {
+		let div = document.createElement('div');
+		div.className = 'img-wrapper';
+		let img = document.createElement('img');
+		img.src = URL + paragraph.src;
+		img.alt = paragraph.alt;
+		img.title = paragraph.text;
+		div.appendChild(img);
+		paragraphs.append(div);
 	}
 
 })
