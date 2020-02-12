@@ -1,10 +1,9 @@
-var articlesDir = 'https://zequnyu9503.github.io/blog/articles/';
-var page = defaultUrlParse('page');
-var paragraphs = $('.essay .paragraphs')
-
 $(function() {
-    
-    let URL = articlesDir + page + '/';
+	
+	var articlesDir = 'https://zequnyu9503.github.io/blog/articles/';
+	var paragraphs = $('.essay .paragraphs')
+	var page = defaultUrlParse('page');
+	var URL = articlesDir + page + '/';
 
     $.ajax({
 		type: 'get',
@@ -15,15 +14,20 @@ $(function() {
 			return data;
 		},
 		success:function(data){
-            for(let paragraph in data){
+			loadWebFrame(data);
+            for(let paragraph in data['content']){
                 loadArticleByLine(data[paragraph]);
             }
 		},
 		error: function(xhr, status, error) {
-			// TO-DO
+			window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
 		}
     });
-    
+	
+	function loadWebFrame(frame) {
+		$('.essay .title h1').text(frame['title']);
+	}
+	
     function loadArticleByLine(paragraph) {
 		console.log(paragraph);
         switch (paragraph.tag) {
