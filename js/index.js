@@ -46,7 +46,13 @@ function articleTemplateFactory(articleObject) {
 function valueFilter(property, object) {
 	let value = Object.assign(object[property])
 	switch (property) {
-		case "id" :  break;
+		case "id" :
+			if (object['tag'] && object['tag'] === 'md') {
+				value = 'md/' + value + '.md';
+			} else {
+				value = 'articles/article.html?page=' + value;
+			}
+			break;
 		case "tag" : break;
 		case "title" : break;
 		case "time" : break;
