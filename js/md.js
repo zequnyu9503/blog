@@ -10,8 +10,12 @@ $(function() {
         url: URL,
         datatype: 'text',
         success:function(data){
-            var md = window.markdownit();
-            md.enable(breaks, true);
+            var md = window.markdownit({
+                html: true,
+                linkify: true,
+                typographer: true,
+                breaks: true
+            });
             var elements = md.render(data);
             $('.content').append(elements);
         },
