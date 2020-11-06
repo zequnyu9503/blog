@@ -48,7 +48,7 @@ function valueFilter(property, object) {
 	switch (property) {
 		case "id" :
 			if (object['tag'] && object['tag'] === 'md') {
-				value = 'md/' + value + '.md';
+				value = 'articles/md/' + value + '.md';
 			} else {
 				value = 'articles/article.html?page=' + value;
 			}
