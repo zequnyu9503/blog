@@ -11,6 +11,7 @@ $(function() {
         datatype: 'text',
         success:function(data){
             var md = window.markdownit();
+            md.enable(breaks, true);
             var elements = md.render(data);
             $('.content').append(elements);
         },
