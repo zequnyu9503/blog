@@ -23,4 +23,8 @@ $(function() {
             window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
         }
     });
+
+    function defaultUrlParse(key){
+        return unescape((window.location.href.match(new RegExp("(\\?|\\&)" + key + "=([^\\&]+)")))[2]);
+    }
 })
