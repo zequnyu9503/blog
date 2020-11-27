@@ -44,14 +44,23 @@ $(function () {
             url: URL_MD,
             datatype: 'text',
             success: function (data) {
-                var md = window.markdownit({
-                    html: true,
-                    linkify: true,
-                    typographer: true,
-                    breaks: true
-                });
-                var elements = md.render(data);
-                $('.content').append(elements);
+                // var md = window.markdownit({
+                //     html: true,
+                //     linkify: true,
+                //     typographer: true,
+                //     breaks: true
+                // });
+                // var elements = md.render(data);
+                // $('.content').append(elements);
+
+                // https://github.com/showdownjs/showdown
+                var converter = new showdown.Converter();
+                // 生成与github样式兼容的标头ID（用破折号替换空格，并删除一堆非字母数字字符）
+                converter.setOption('ghCompatibleHeaderId', 'true');
+                // 省略代码块中的尾随换行符
+                converter.setOption('omitExtraWLInCodeBlocks', 'true');
+                var html = converter.makeHtml(data);
+                $('.content').append(html);
             },
             error: function (xhr, status, error) {
                 window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
