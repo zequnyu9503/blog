@@ -17,7 +17,7 @@ function loadInfo(){
 			return data;
 		},
 		success:function(data){
-			catalogStructure = data['catalog']
+			catalogStructure = data['catalog'];
 			loadArticleList();
 		},
 		error: function(xhr, status, error) {

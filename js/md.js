@@ -1,30 +1,67 @@
-$(function() {
+$(function () {
+    var articlesDir = 'https://zequnyu9503.github.io/blog/articles/';
+    var URL_CAT = articlesDir + 'catalog.json';
 
     var articlesDir = 'https://zequnyu9503.github.io/blog/articles/md/';
     var id = defaultUrlParse('id');
-    var URL = articlesDir + id + '.md';
+    if (!id || id == 'undefined') {
+        window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
+    }
+    var URL_MD = articlesDir + id + '.md';
 
-    $.ajax({
-        type: 'get',
-        async: true,
-        url: URL,
-        datatype: 'text',
-        success:function(data){
-            var md = window.markdownit({
-                html: true,
-                linkify: true,
-                typographer: true,
-                breaks: true
-            });
-            var elements = md.render(data);
-            $('.content').append(elements);
-        },
-        error: function(xhr, status, error) {
-            window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
-        }
-    });
+    function loadTemplate() {
+        $.ajax({
+            type: 'get',
+            async: true,
+            url: URL_CAT,
+            datatype: 'text',
+            success: function (data) {
+                var cats = data['catalog'];
+                var isFound = false;
+                $.each(cats, function (ind, val) {
+                    if (val['id'] === id) {
+                        isFound = true;
+                        $('.file .title').html(val['title']);
+                        $('.file .brief').html(val['brief']);
+                    }
+                });
+                if (isFound) {
+                    loadMD();
+                } else {
+                    window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
+                }
+            },
+            error: function (xhr, status, error) {
+                window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
+            }
+        });
+    }
 
-    function defaultUrlParse(key){
+    function loadMD() {
+        $.ajax({
+            type: 'get',
+            async: true,
+            url: URL_MD,
+            datatype: 'text',
+            success: function (data) {
+                var md = window.markdownit({
+                    html: true,
+                    linkify: true,
+                    typographer: true,
+                    breaks: true
+                });
+                var elements = md.render(data);
+                $('.content').append(elements);
+            },
+            error: function (xhr, status, error) {
+                window.location.href = 'https://zequnyu9503.github.io/blog/404.html';
+            }
+        });
+    }
+
+    function defaultUrlParse(key) {
         return unescape((window.location.href.match(new RegExp("(\\?|\\&)" + key + "=([^\\&]+)")))[2]);
     }
+
+    loadTemplate();
 })
