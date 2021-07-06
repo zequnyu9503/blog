@@ -38,7 +38,7 @@ $(function() {
 			async: true,
 			url: articlesDir +  'catalog.json',
 			datatype: 'json',
-			success:function(data){
+			success: function(data){
 				let catalogs = data['catalog'];
 				let titles = Array();
 				for (let index in catalogs) {

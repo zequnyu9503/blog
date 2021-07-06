@@ -30,9 +30,15 @@ function loadArticleList(){
 	if(!catalogStructure) return;
 	for(let n in catalogStructure){
 		let articleObject = catalogStructure[n];
-		let artcleBlock = articleTemplateFactory(articleObject)
-		$("#articles").append(artcleBlock);
+		if (isValid(articleObject)) {
+			let artcleBlock = articleTemplateFactory(articleObject)
+			$("#articles").append(artcleBlock);
+		}
 	}
+}
+
+function isValid(articleObject) {
+	return articleObject['valid'];
 }
 
 function articleTemplateFactory(articleObject) {
